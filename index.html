@@ -2,33 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>偏差値診断</title>
 
   <style>
-    
-{
-    box-sizing: border-box;}
-
     body {
       margin: 0;
-      width: 100%;
       height: 100vh;
-      background: #000;
+      background: black;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
     }
 
-    #button {
+    button {
       background: white;
       color: black;
       border: none;
-      border-radius: 12px;
-      padding: 20px 45px;
+      padding: 20px 50px;
       font-size: 24px;
-      font-weight: bold;
+      border-radius: 10px;
       cursor: pointer;
     }
 
@@ -36,7 +29,6 @@
       display: none;
       color: white;
       font-size: 50px;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -48,10 +40,13 @@
   <div id="result">🫡🫡</div>
 
   <script>
-    document.getElementById("button").onclick = function () {
-      this.style.display = "none";
-      document.getElementById("result").style.display = "block";
-    };
+    const button = document.getElementById("button");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", function() {
+      button.style.display = "none";
+      result.style.display = "block";
+    });
   </script>
 
 </body>
