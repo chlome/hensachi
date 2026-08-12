@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偏差値診断</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: sans-serif;
+    }
+
+    #diagnosisButton {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #diagnosisButton:hover {
+      transform: scale(1.05);
+    }
+
+    #result {
+      display: none;
+      font-size: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="diagnosisButton">偏差値診断</button>
+
+  <div id="result">🫡🫡</div>
+
+  <script>
+    const button = document.getElementById("diagnosisButton");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", function () {
+      button.style.display = "none";
+      result.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
